@@ -31,6 +31,14 @@ public class StepDetector {
                     callBack_stepDetector.stepDetect(counter);
                 }
 
+
+
+                if (counter > 5) {
+                    if (callBack_stepDetector != null) {
+                        callBack_stepDetector.jumpDetect();
+                    }
+                }
+
                 handler.postDelayed(this, delay);
             }
         }, delay);
